@@ -35,10 +35,31 @@ const Product = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
 
-      {/* Filter Section */}
-      <FilterSection onFilterChange={setFilters} />
+      <div className="w-full bg-[#5A2A55] text-white rounded-lg p-4 mb-10 flex justify-between items-center">
+        <div className="text-lg font-semibold">Recommended for You</div>
+        <div className="text-sm">🔥 Big Sale • Up to 40% Off</div>
+      </div>
 
-      {/* Product Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
+
+        <div className="md:col-span-2 h-full flex">
+          <div className="w-full h-full">
+            <FilterSection onFilterChange={setFilters} />
+          </div>
+        </div>
+
+        <div className="bg-white shadow-md rounded-lg p-4 flex items-center justify-center h-full">
+          <video
+            src="/ads/ad1.mp4"
+            autoPlay
+            loop
+            muted
+            className="rounded-lg w-full h-full object-cover"
+          />
+        </div>
+
+      </div>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {filteredProducts.map((item) => {
           const imageSrc = Array.isArray(item.images)
@@ -66,6 +87,7 @@ const Product = () => {
           );
         })}
       </div>
+
     </div>
   );
 };
