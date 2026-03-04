@@ -37,7 +37,7 @@ const Product = () => {
 
       <div className="w-full bg-[#5A2A55] text-white rounded-lg p-4 mb-10 flex justify-between items-center">
         <div className="text-lg font-semibold">Recommended for You</div>
-        <div className="text-sm">🔥 Big Sale • Up to 40% Off</div>
+        <div className="text-sm px-2 py-3 bg-[#D4AF37] text-black rounded-md"> Big Sale • Up to 40% Off</div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
