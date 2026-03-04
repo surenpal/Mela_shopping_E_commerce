@@ -1,6 +1,7 @@
 import Carousel from '../components/Carousel'
 import MidBanner from '../components/MidBanner'
 import Features from '../components/Features'
+import Retry from '../components/Retry'
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
       <Carousel/>
       <MidBanner />
       <Features />
-      <Retry/>
+      <Retry onRetry={() => alert('Retrying...')} />  
     </>
   )
 }
