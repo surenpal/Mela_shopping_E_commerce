@@ -6,12 +6,12 @@ const AboutSection = () => {
     <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
 
-        {/* Heading */}
+    
         <h2 className="text-4xl font-bold text-gray-800 mb-6">
           About <span className="text-pink-600">MELA</span>
         </h2>
 
-        {/* Paragraph */}
+    
         <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto text-lg">
           Welcome to MELA, your one-stop destination for quality products across
           multiple categories designed to simplify and enrich everyday life.
@@ -32,7 +32,7 @@ const AboutSection = () => {
           need quickly, safely, and at the best value.
         </p>
 
-        {/* Button */}
+
         <div className="mt-10">
           <Link to="/products">
             <button className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition">
