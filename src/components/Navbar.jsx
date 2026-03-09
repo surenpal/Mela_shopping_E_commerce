@@ -14,7 +14,7 @@ const Navbar = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
   const toggleMenu = () => setOpenMenu(!openMenu)
 
   return (
-    <div className="bg-gradient-to-r from-pink-100 via-pink-200 to-pink-300 py-3 shadow-lg backdrop-blur-sm">
+    <div className="bg-gradient-to-r from-pink-400 via-pink-300 to-pink-600 py-3 shadow-lg backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
 
         {/* Logo & Location */}

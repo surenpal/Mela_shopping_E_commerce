@@ -1,4 +1,5 @@
 import bg_midbanner from "../assets/bg_midbanner.avif"
+import { Link } from "react-router-dom";
 
 const MidBanner = () => {
   return (
@@ -17,9 +18,11 @@ const MidBanner = () => {
           <p className="text-lg md:text-2xl mb-6">
             Unleash your inner fashionista with our exclusive collection.
           </p>
+          <Link to="/products">
           <button className="bg-[#5A2A55] hover:bg-[#4a2147] text-white px-6 py-3 rounded-md transition">
             Shop Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

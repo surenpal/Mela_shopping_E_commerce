@@ -36,10 +36,10 @@ const Product = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="w-full bg-gradient-to-r from-pink-300 via-pink-300 to-pink-300 py-3 shadow-lg backdrop-blur-sm text-white rounded-lg p-4 mb-10 flex justify-between items-center">
 
-      <div className="w-full bg-[#5A2A55] text-white rounded-lg p-4 mb-10 flex justify-between items-center">
-        <div className="text-lg font-semibold">Recommended for You</div>
-        <div className="text-sm px-2 py-3 bg-[#D4AF37] text-black rounded-md">
+        <div className="text-lg font-semibold text-gray-500">Recommended for You</div>
+        <div className="text-bold px-2 py-3 bg-pink-400 text-black rounded-md">
           Big Sale • Up to 40% Off
         </div>
       </div>
