@@ -2,21 +2,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { getData } from "../context/DataContext";
 import FilterSection from "../components/FilterSection";
-import ProductCard from "../components/ProductCard"; // import the new ProductCard component
+import ProductCard from "../components/ProductCard";
+
+
 
 const Product = () => {
   const { data, fetchAllProducts } = getData();
-
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-
-  const currentProducts = filteredProducts.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
-
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-
 
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 16;
@@ -30,6 +21,11 @@ const Product = () => {
   useEffect(() => {
     if (!data?.length) fetchAllProducts();
   }, [data, fetchAllProducts]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters]);
+
 
   const filteredProducts = useMemo(() => {
     if (!Array.isArray(data)) return [];
@@ -46,6 +42,21 @@ const Product = () => {
       .filter((item) => item.price <= filters.maxPrice);
   }, [data, filters]);
 
+
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+
+
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
   if (!Array.isArray(data))
     return <div className="text-center py-20 text-lg">Loading...</div>;
 
@@ -61,7 +72,7 @@ const Product = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
         <div className="md:col-span-2 h-full flex items-center justify-center bg-white shadow-md rounded-lg p-4">
-          <div className="w-full h-full">
+          <div className="md:col-span-2 bg-white shadow-md rounded-lg p-4">
             <FilterSection onFilterChange={setFilters} />
           </div>
         </div>
@@ -78,7 +89,7 @@ const Product = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {filteredProducts.map((item) => {
+        {currentProducts.map((item) => {
           const imageSrc = Array.isArray(item.images)
             ? item.images[0]?.url || item.images[0]
             : item.images;
@@ -95,8 +106,25 @@ const Product = () => {
           );
         })}
       </div>
+
+      <div className="flex justify-center mt-10 gap-2 flex-wrap">
+        {[...Array(totalPages)].map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentPage(index + 1)}
+            className={`px-4 py-2 rounded-md ${currentPage === index + 1
+              ? "bg-pink-500 text-white"
+              : "bg-gray-200 hover:bg-gray-300"
+              }`}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
+
+
 
 export default Product;
