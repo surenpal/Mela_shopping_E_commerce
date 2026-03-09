@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#111] text-gray-300 py-12">
+        <footer className="bg-gradient-to-r from-pink-400 via-pink-300 to-pink-400 text-gray-300 py-12">
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
 
                 {/* Brand + Description */}
@@ -13,11 +13,11 @@ const Footer = () => {
                             MELA
                         </h1>
                     </Link>
-                    <p className="mt-3 text-sm">
+                    <p className="mt-3 text-sm text-gray-600">
                         The best place, where you can find the best beauty, electronic, Home Decor products, with the best prices and top-notch customer service.
                     </p>
 
-                    <div className="mt-4 space-y-1 text-sm text-blue-400">
+                    <div className="mt-4 space-y-1 text-sm text-gray-600">
                         <p>Tokyo,Adachi-Ku,1210823,Umejima station</p>
                         <p>Email: support@MELA.com</p>
                         <p>Phone: (030) 4456-6745</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                 {/* Customer Service */}
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Customer Service</h3>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-sm text-gray-600">
                         <li className="hover:text-white cursor-pointer">Contact Us</li>
                         <li className="hover:text-white cursor-pointer">Shipping & Returns</li>
                         <li className="hover:text-white cursor-pointer">FAQs</li>
@@ -50,7 +50,7 @@ const Footer = () => {
                 {/* Newsletter */}
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Stay Updated</h3>
-                    <p className="text-sm mb-4">
+                    <p className="text-sm mb-4 text-gray-600">
                         Subscribe to get special offers, and more.
                     </p>
 
@@ -58,9 +58,9 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Your email address"
-                            className="w-full px-3 py-2 rounded-l-md bg-gray-800 text-gray-200 focus:outline-none"
+                            className="w-full px-3 py-2 rounded-l-md bg-white/20 text-gray-200 focus:outline-none border border-white/20 focus:border-pink-400"
                         />
-                        <button className="bg-[#5A2A55] hover:bg-[#4a2147] px-4 py-2 rounded-r-md text-white font-semibold">
+                        <button className="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-r-md text-white font-semibold">
                             Subscribe
                         </button>
                     </div>
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+            <div className="border-t border-gray-700 mt-10 pt-6 text-center text-lg text-gray-600">
                 © 2025 MELA. All rights reserved.
             </div>
         </footer>
