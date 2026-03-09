@@ -70,14 +70,12 @@ const Product = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-stretch">
-        <div className="md:col-span-2 h-full flex items-center justify-center bg-white shadow-md rounded-lg p-4">
-          <div className="md:col-span-2 bg-white shadow-md rounded-lg p-4">
-            <FilterSection onFilterChange={setFilters} />
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 
-        <div className="bg-white shadow-md rounded-lg p-2 flex items-center justify-center h-full">
+        <div className="bg-white shadow-md rounded-lg p-4">
+          <FilterSection onFilterChange={setFilters} />
+        </div>
+        <div className="md:col-span-2 bg-white shadow-md rounded-lg p-2 flex items-center justify-center">
           <video
             src="/public/shopping.mp4"
             autoPlay
