@@ -46,10 +46,10 @@ const Checkout = ({ cart, setCart }) => {
     return (
         <div className="min-h-screen bg-white flex justify-center items-center p-8">
 
-            <div className="bg-blue-800 w-full max-w-6xl rounded-2xl shadow-lg grid md:grid-cols-2 gap-10 p-10">
+            <div className="bg-white w-full max-w-6xl rounded-2xl shadow-lg grid md:grid-cols-2 gap-10 p-10">
 
                 {/* LEFT SIDE */}
-                <div className="text-white">
+                <div className="text-gray-800">
 
                     <h2 className="text-3xl font-bold mb-6">Order Summary</h2>
 
@@ -93,7 +93,7 @@ const Checkout = ({ cart, setCart }) => {
                         name="name"
                         placeholder="Your Name"
                         onChange={handleChange}
-                        className="w-full p-3 rounded-lg bg-blue-700 border border-blue-600"
+                        className="w-full p-3 rounded-lg bg-gray-200 text-gray-800 placeholder:text-gray-400 border border-blue-600"
                         required
                     />
 
@@ -102,7 +102,7 @@ const Checkout = ({ cart, setCart }) => {
                         name="email"
                         placeholder="Email Address"
                         onChange={handleChange}
-                        className="w-full p-3 rounded-lg bg-blue-700 border border-blue-600"
+                        className="w-full p-3 rounded-lg bg-gray-200 text-gray-800 placeholder:text-gray-400 border border-blue-600"
                         required
                     />
 
@@ -111,7 +111,7 @@ const Checkout = ({ cart, setCart }) => {
                         name="phone"
                         placeholder="Phone"
                         onChange={handleChange}
-                        className="w-full p-3 rounded-lg bg-blue-700 border border-blue-600"
+                        className="w-full p-3 rounded-lg bg-gray-200 text-gray-800 placeholder:text-gray-400 border border-blue-600"
                         required
                     />
 
@@ -119,7 +119,7 @@ const Checkout = ({ cart, setCart }) => {
                         name="address"
                         placeholder="Shipping Address"
                         onChange={handleChange}
-                        className="w-full p-3 rounded-lg bg-blue-700 border border-blue-600"
+                        className="w-full p-3 rounded-lg bg-gray-200 text-gray-800 placeholder:text-gray-400 border border-blue-600"
                         rows="4"
                         required
                     />
@@ -128,7 +128,7 @@ const Checkout = ({ cart, setCart }) => {
                         type="submit"
                         className="w-full mt-4 bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-lg font-semibold"
                     >
-                        {orderPlaced ? "Order Placed Successfully ✅" : "Place Order"}
+                        {orderPlaced ? "Order Placed Successfully..." : "Place Order"}
                     </button>
 
                 </form>
