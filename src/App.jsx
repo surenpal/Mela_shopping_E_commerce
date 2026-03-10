@@ -110,7 +110,8 @@ const App = () => {
 
         <Route
           path="/cart"
-          element={<Cart cart={cart} />} />
+          element={<Cart cart={cart} setCart={setCart} />}
+        />
 
         <Route
           path="/checkout"
