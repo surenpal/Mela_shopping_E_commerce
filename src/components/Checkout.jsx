@@ -44,7 +44,7 @@ const Checkout = ({ cart, setCart }) => {
     };
 
     return (
-        <div className="min-h-screen bg-blue-900 flex justify-center items-center p-8">
+        <div className="min-h-screen bg-white flex justify-center items-center p-8">
 
             <div className="bg-blue-800 w-full max-w-6xl rounded-2xl shadow-lg grid md:grid-cols-2 gap-10 p-10">
 
